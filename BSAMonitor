@@ -1,0 +1,115 @@
+//Quintin Yu, 5004799546
+//BsaMonitor
+package com.company;
+
+import java.util.Scanner;
+
+public class BsaMonitor {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner (System.in);
+
+//Cijfer invoer
+        System.out.println("Voer behaalde cijfers in:");
+        System.out.print("Fasten Your Seatbelts:");
+        double fastenyourbeatbelts = input.nextDouble();
+
+        System.out.print("Programming:");
+        double programming = input.nextDouble();
+
+        System.out.print("Databases:");
+        double databases = input.nextDouble();
+
+        System.out.print("Personall Skills:");
+        double personalskills = input.nextDouble();
+
+        System.out.print("Project Skills:");
+        double projectskills = input.nextDouble();
+
+        System.out.print("Game Basics:");
+        double gamebasics = input.nextDouble();
+
+        System.out.print("User Interaction:");
+        double userinteraction = input.nextDouble();
+        
+// Punten Toewijzen
+        System.out.println(" ");
+
+        if (fastenyourbeatbelts >= 5.5) {
+            System.out.println("Vak/project: Fasten Your Seatbelts \t\tCijfer:" + fastenyourbeatbelts + "\t\tBehaalde punten 12");
+                fastenyourbeatbelts = 12;
+        }
+        else{
+            System.out.println("Vak/project: Fasten Your Seatbelts \t\tCijfer:" + fastenyourbeatbelts + "\t\tBehaalde punten 0");
+                fastenyourbeatbelts = 0;
+        }
+
+        if (programming >= 5.5) {
+            System.out.println("Vak/project: Programming \t\t\t\tCijfer:" + programming + "\t\tBehaalde punten 3");
+                programming = 3;
+        }
+        else{
+            System.out.println("Vak/project: Programming \t\t\t\tCijfer:" + programming + "\t\tBehaalde punten 0");
+                programming = 0;
+        }
+
+        if (databases >= 5.5) {
+            System.out.println("Vak/project: Databases \t\t\t\t\tCijfer:" + databases + "\t\tBehaalde punten 3");
+                databases = 3;
+        }
+        else{
+            System.out.println("Vak/project: Databases \t\t\t\t\tCijfer:" + databases + "\t\tBehaalde punten 0");
+                databases = 0;
+        }
+
+        if (personalskills >= 5.5) {
+            System.out.println("Vak/project: Personal Skills \t\t\tCijfer:" + personalskills + "\t\tBehaalde punten 2");
+                personalskills = 2;
+        }
+        else{
+        System.out.println("Vak/project: Personal Skills \t\t\tCijfer:" + personalskills + "\t\tBehaalde punten 0");
+                personalskills = 0;
+        }
+
+        if (projectskills >= 5.5) {
+            System.out.println("Vak/project: Project Skills \t\t\tCijfer:" + projectskills + "\t\tBehaalde punten 2");
+                projectskills = 2;
+        }
+        else{
+            System.out.println("Vak/project: Project Skills \t\t\tCijfer:" + projectskills + "\t\tBehaalde punten 0");
+                projectskills = 0;
+        }
+
+        if (gamebasics >= 5.5) {
+            System.out.println("Vak/project: Game Basics \t\t\t\tCijfer:" + gamebasics + "\t\tBehaalde punten 3");
+                gamebasics = 3;
+        }
+        else{
+            System.out.println("Vak/project: Game Basics \t\t\t\tCijfer:" + gamebasics + "\t\tBehaalde punten 0");
+                gamebasics = 0;
+        }
+
+        if (userinteraction >= 5.5) {
+            System.out.println("Vak/project: User Interaction \t\t\tCijfer:" + userinteraction + "\t\tBehaalde punten 3");
+                userinteraction = 3;
+        }
+        else{
+            System.out.println("Vak/project: User Interaction \t\t\tCijfer:" + userinteraction + "\t\tBehaalde punten 0");
+                userinteraction = 0;
+        }
+
+//Bsa score
+        System.out.println(" ");
+
+        double bsa = (fastenyourbeatbelts + programming + databases+ personalskills + projectskills + gamebasics + userinteraction);
+        if (bsa >= 23) {
+            System.out.println("Totaal behaalde studiepunten:" +(int) bsa + "/28");
+        }
+        else {
+            System.out.println("Totaal behaalde studiepunten:" + (int) bsa + "/28");
+            System.out.println("PAS OP: je ligt op schema voor een negatief BSA!");
+        }
+
+    }
+}
