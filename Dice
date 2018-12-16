@@ -1,0 +1,36 @@
+/**
+ * Quintin Yu, 500799546
+ */
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Doublesteen{
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner (System.in);
+
+        System.out.print("Welk karakter moet ik gebruiken voor het oog:");
+        char character = input.next().charAt(0);
+        int getal = 0;
+
+        do {
+            getal = (int) (Math.random() * 6 + 1);
+            if (getal == 1) {
+                System.out.println("\n " + character + " \n\n");
+            } else if (getal == 2) {
+                System.out.println(character + "\n\n  " + character + "\n");
+            } else if (getal == 3) {
+                System.out.println(character + "\n " + character + "\n  " + character + "\n");
+            } else if (getal == 4) {
+                System.out.println(character + " " + character + "\n\n" + character + " " + character + "\n");
+            } else if (getal == 5) {
+                System.out.println(character + " " + character + "\n "+ character + "\n" + character + " " + character + "\n");
+            } else if (getal == 6) {
+                System.out.println(character + " " + character + "\n" + character + " " + character + "\n" + character + " " + character + "\n");
+            }
+        }while (getal != 6);
+    }
+}
