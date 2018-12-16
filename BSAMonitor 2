@@ -1,0 +1,79 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class BsaMonitor2 {
+
+    public static void main(String[] args) {
+
+        int totalStudiePunt = 0;
+        String[] vakNamen = {"FYS", //12 studie punten
+                "Programming", "Databases", "Game Basics", "User Interaction", //3 studie punten
+                "Personal Skills", "Project Skills", "Wiskunde", //2 studie punten
+                "Nederlands", "English"}; //1 studie punt
+        double[] cijfers = new double[10];
+        int[] studiePunten = {12, 3, 2, 1, 0};
+
+        Scanner input = new Scanner(System.in);
+
+        for (int iVak = 0; iVak < 10; iVak++) {
+            while (cijfers[iVak] <= 1 || cijfers[iVak] >= 10) {
+                System.out.print(vakNamen[iVak] + ": ");
+                cijfers[iVak] = input.nextDouble();
+            }
+        }
+
+        System.out.println("");
+
+        for (int iCijfers = 0; iCijfers < 1; iCijfers++) {
+            if(cijfers[iCijfers] >= 5.5) {
+                System.out.printf("Vak/project: %-17s Cijfer %2.1f  Studiepunten: %d \n", vakNamen[iCijfers], cijfers[iCijfers], studiePunten[0]);
+                totalStudiePunt += 12;
+            }
+            else{
+                System.out.printf("Vak/project: %-17s Cijfer %2.1f  Studiepunten: %d \n", vakNamen[iCijfers], cijfers[iCijfers], studiePunten[4]);
+            }
+        }
+
+        for (int iCijfers = 1; iCijfers < 5; iCijfers++) {
+            if(cijfers[iCijfers] >= 5.5) {
+                System.out.printf("Vak/project: %-17s Cijfer %2.1f  Studiepunten: %d \n", vakNamen[iCijfers], cijfers[iCijfers], studiePunten[1]);
+                totalStudiePunt += 3;
+            }
+            else{
+                System.out.printf("Vak/project: %-17s Cijfer %2.1f  Studiepunten: %d \n", vakNamen[iCijfers], cijfers[iCijfers], studiePunten[4]);
+            }
+        }
+
+        for (int iCijfers = 5; iCijfers < 8; iCijfers++) {
+            if(cijfers[iCijfers] >= 5.5) {
+                System.out.printf("Vak/project: %-17s Cijfer %2.1f  Studiepunten: %d \n", vakNamen[iCijfers], cijfers[iCijfers], studiePunten[2]);
+                totalStudiePunt += 2;
+            }
+            else{
+                System.out.printf("Vak/project: %-17s Cijfer %2.1f  Studiepunten: %d \n", vakNamen[iCijfers], cijfers[iCijfers], studiePunten[4]);
+            }
+        }
+
+        for (int iCijfers = 8; iCijfers < 10; iCijfers++) {
+            if(cijfers[iCijfers] >= 5.5) {
+                System.out.printf("Vak/project: %-17s Cijfer %2.1f  Studiepunten: %d \n", vakNamen[iCijfers], cijfers[iCijfers], studiePunten[3]);
+                totalStudiePunt += 1;
+            }
+            else{
+                System.out.printf("Vak/project: %-17s Cijfer %2.1f  Studiepunten: %d \n", vakNamen[iCijfers], cijfers[iCijfers], studiePunten[4]);
+            }
+        }
+
+        System.out.println("");
+
+        if (totalStudiePunt >= 27) {
+            System.out.println("Totaal behaalde studiepunten:" +(int) totalStudiePunt + "/32");
+        }
+        else {
+            System.out.println("Totaal behaalde studiepunten:" + (int) totalStudiePunt + "/32");
+            System.out.println("PAS OP: je ligt op schema voor een negatief BSA!");
+        }
+
+    }
+}
