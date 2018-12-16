@@ -1,0 +1,32 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// Quintin Yu, 500799546
+        // Doel van het programma is het uitrekenen van de verkoop prijs
+
+        Scanner input = new Scanner(System.in);
+
+        // Invoer Inkoopprijs
+        System.out.println("Inkoopprijs:");
+        double inkoopprijs = input.nextDouble();
+
+        //Invoer Winstmarge
+        System.out.println("Winstmarge (in %):");
+        int Winstmarge = input.nextInt();
+
+        //Rekenen exlucisief btw
+        System.out.println("De prijs zonder BTW is: " + (inkoopprijs * (Winstmarge / 100.0 + 1.0)));
+
+        //Rekenen inclusief 6% BTW
+        double BTW_LAAG = 1.0 + 6.0 / 100;
+        System.out.println("De prijs met 6% BTW is: " + (inkoopprijs * BTW_LAAG * (Winstmarge / 100.0 + 1.0)));
+
+        //Rekenen inclusief 21% BTW
+        double BTW_HOOG = 1.0 + 21.0 / 100;
+        System.out.println("De prijs met 21% BTW is: " + (inkoopprijs * BTW_HOOG * (Winstmarge / 100.0 + 1.0)));
+    }
+}
