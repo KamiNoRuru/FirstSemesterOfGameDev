@@ -1,0 +1,74 @@
+package com.company;
+
+//Programma Println, song tekst. Gemaakt Quintin Yu
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+System.out.println("Imagine Dragons, Natural\n");
+
+System.out.println("Will you hold the line?\n" +
+        "When every one of them is giving up or giving in, tell me\n" +
+        "In this house of mine?\n" +
+        "Nothing ever comes without a consequence or cost, tell me\n" +
+        "Will the stars align?\n" +
+        "Will heaven step in? Will it save us from our sin? Will it?\n" +
+        "'Cause this house of mine stands strong\n");
+
+System.out.println("That's the price you pay/n" +
+        "Leave behind your heartache, cast away\n" +
+        "Just another product of today\n" +
+        "Rather be the hunter than the prey\n" +
+        "And you're standing on the edge, face up 'cause you're\n");
+
+System.out.println("Natural\n" +
+        "A beating heart of stone\n" +
+        "You gotta be so cold\n" +
+        "To make it in this world\n" +
+        "Yeah, you're a natural\n" +
+        "Living your life cutthroat\n" +
+        "You gotta be so cold\n" +
+        "Yeah, you're a natural\n");
+
+System.out.println("Will somebody\n" +
+        "Let me see the light within the dark trees' shadows and\n" +
+        "What's happenin'?\n" +
+        "Lookin' through the glass find the wrong within the past knowin'\n" +
+        "We are the youth\n" +
+        "Call out to the beast, not a word without the peace, facing\n" +
+        "A bit of the truth, the truth\n");
+
+System.out.print("That's the price you pay\n" +
+        "Leave behind your heartache, cast away\n" +
+        "Just another product of today\n" +
+        "Rather be the hunter than the prey\n" +
+        "And you're standing on the edge, face up 'cause you're a\n");
+
+System.out.println("Natural\n" +
+        "A beating heart of stone\n" +
+        "You gotta be so cold\n" +
+        "To make it in this world\n" +
+        "Yeah, you're a natural\n" +
+        "Living your life cutthroat\n" +
+        "You gotta be so cold\n" +
+        "Yeah, you're a natural\n");
+
+System.out.println("Deep inside me, I'm fading to black, I'm fading\n" +
+        "Took an oath by the blood of my hand, won't break it\n" +
+        "I can taste it, the end is upon us, I swear\n" +
+        "Gonna make it\n" +
+        "I'm gonna make it\n");
+
+System.out.println("Natural\n" +
+        "A beating heart of stone\n" +
+        "You gotta be so cold\n" +
+        "To make it in this world\n" +
+        "Yeah, you're a natural\n" +
+        "Living your life cutthroat\n" +
+        "You gotta be so cold\n" +
+        "Yeah, you're a natural\n");
+
+System.out.println("Natural\n" +
+        "Yeah, you're a natural\n");
+    }
+}
