@@ -1,0 +1,81 @@
+package com.company;
+
+import java.util.Scanner;
+
+/**
+ * Quintin Yu, 500799546
+ * Een rekenmachine om simpele sommen uit te rekenen.
+ */
+
+public class Calculator {
+
+    private static void printanswer(char operator, double number1, double number2) {
+
+        double sum = 0;
+        switch (operator) {
+            case '+':
+                sum = number1 + number2;
+                break;
+            case '-':
+                sum = number1 - number2;
+                break;
+            case '*':
+                sum = number1 * number2;
+                break;
+            case '/':
+                sum = number1 / number2;
+                break;
+            case '%':
+                sum = number1 % number2;
+                break;
+        }
+        System.out.println(number1 + " " + operator + " " + number2 + " = " + sum + "\n");
+    }
+
+    private static boolean isGeldigeOperator(char character) {
+        boolean isGeldig;
+
+        if (character == '+' || character == '-' || character == '*' || character == '/' || character == '%' || character == 'S') {
+            isGeldig = true;
+        }
+        else{
+            isGeldig = false;
+        }
+
+        if (isGeldig) {
+        }
+        else {
+            System.out.println("Operator is ongeldig.\n");
+        }
+        return isGeldig;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        char operator = 'i';
+
+        while (operator != 'S') {
+
+            System.out.print("Geef een operator (S = stoppen): ");
+            operator = input.next().charAt(0);
+
+            while (!isGeldigeOperator(operator)) {
+                System.out.print("Geef een operator (S = stoppen): ");
+                operator = input.next().charAt(0);
+            }
+
+            if (operator == 'S') {
+                System.out.println("Het programma is gestopt!");
+            } else
+                {
+                System.out.print("Geef het eerste kommagetal waarmee je wilt rekenen: ");
+                double getal1 = input.nextDouble();
+
+                System.out.print("Geef het tweede kommagetal waarmee je wilt rekenen: ");
+                double getal2 = input.nextDouble();
+
+                printanswer(operator, getal1, getal2);
+            }
+        }
+    }
+}
